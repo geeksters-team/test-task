@@ -1,0 +1,69 @@
+<div class="wrapper">
+    <header class="header">
+        <nav class="navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" ui-sref = "startScreen">Logo</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav center">
+                    <li class="active"><a ui-sref = "startScreen">Start</a></li>
+                    <li><a href="#">Applications</a></li>
+                    <li><a href="#">Trade</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+                <div class="clearfix"></div>
+                <ul class="nav navbar-nav profile">
+                    <li><a class="" ui-sref = "profile"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="content container">
+
+        <ul rn-carousel rn-carousel-auto-slide="3" rn-carousel-index class="angular-carousel">
+            <li ng-repeat="slide in slides" class="slider">
+                <div class="textfield">
+                    <h3>{{slide.title}} </h3>
+                        <span>
+                            {{slide.text}}
+                        </span>
+                    <div class="button-title">{{slide.buttonText}}</div>
+                </div>
+                <div class="slider-content">
+                    <img ondrag="return false" ondragdrop="return false" ondragstart="return false"
+                         ng-src="{{slide.image}}" class="img-responsive" alt="There is no image to display">
+                </div>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+        <div class="heading">
+            <h2>Heading</h2>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquid dolore eligendi est
+            excepturi inventore ipsa ipsum laudantium magnam molestias, mollitia nemo odit officia praesentium, rem
+            sit ut vel. Aliquid asperiores dignissimos dolorum explicabo harum, ipsa ipsum libero magni minus necessitatibus
+            nesciunt nostrum odio officia quo quos unde voluptatem? Asperiores ea eligendi facilis maiores nesciunt
+            optio pariatur, tenetur vero. Architecto debitis eius et libero pariatur, quidem totam! Adipisci architecto commodi cum dolores ea
+            excepturi illo illum in iste minima natus nulla numquam, officiis optio perspiciatis quibusdam
+            recusandae repellendus soluta.
+        </div>
+
+        <div class="google-map">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                <ui-gmap-marker coords="marker.coords" options="marker.options" idkey="marker.id">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
+    </main>
+    <footer class="footer navbar-inverse">
+        <div class="container">
+            <span>&copy 2016, ACME Ltd.</span>
+            <a class="navbar-right" href="">Imprint</a>
+        </div>
+    </footer>
+</div>
